@@ -7,7 +7,12 @@ mkdir data && cd data
 mkdir ModelNet && cd ModelNet
 curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=1zE1d_eYD_QEnmS01LlZlEOMSZTIXRwIA" > /dev/null
 curl -Lb ./cookie "https://drive.google.com/uc?export=download&confirm=`awk '/download/ {print $NF}' ./cookie`&id=1zE1d_eYD_QEnmS01LlZlEOMSZTIXRwIA" -o modelnet_classification.h5
+md5sum modelnet_classification.h5
 
+```
+The output should be exactly the same as this:
+```
+87e763a66819066da670053a360889ed  modelnet_classification.h5
 ```
 ## Models
 There are model.py and model1.py in model directory.  
